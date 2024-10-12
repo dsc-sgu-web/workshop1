@@ -5,10 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сайт-портфолио</title>
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="icon" href="images/favicon.svg" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav>
+      <a href="#" class="brand">
+        <img src="images/favicon.svg" alt="Logo" />
+        Сайт-портфолио
+      </a>
+
+      <div class="items-wrapper hidden">
+        <ul class="items navlinks">
+          <li><a href="#about-me">Обо мне</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+
+        <ul class="items socials">
+          <li>
+            <a href="https://t.me/im_robertproducts" target="_blank">
+              <i class="bi bi-telegram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/tolstovr" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <button id="nav-toggle" data-active="false">
+        <i class="bi bi-list"></i>
+      </button>
+    </nav>
 
     <script src="app.js"></script>
   </body>
