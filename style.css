@@ -48,6 +48,11 @@ main {
   scale: 90%;
 }
 
+.anchor {
+  height: 5.75rem;
+  margin-top: -5.75rem;
+}
+
 /* navbar */
 nav {
   display: flex;
