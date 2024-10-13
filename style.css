@@ -25,6 +25,21 @@ main {
   margin: 2rem auto;
 }
 
+section {
+  margin: 5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin: 5rem auto;
+    width: 90%;
+  }
+}
+
+section > h2 {
+  font-size: xx-large;
+}
+
 :root {
   --color-text: #0f0f0f;
   --color-bg: #efefef;
@@ -130,7 +145,7 @@ nav .items.socials a {
     left: 1rem;
     right: 1rem;
     background-color: var(--color-text);
-    box-shadow: 0 0 0.5rem black;
+    box-shadow: 0 0 .5rem black;
     padding: 2rem;
   }
 
@@ -171,5 +186,63 @@ nav .items.socials a {
   .hero .info {
     max-width: 80%;
     font-size: medium;
+  }
+}
+
+/* About me */
+.about-me h1 {
+  font-size: xx-large;
+}
+
+.about-me .article-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 5rem;
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.about-me .article-wrapper article {
+  width: 50%;
+}
+
+.about-me .article-wrapper article > * {
+  margin-top: 1rem;
+}
+
+.about-me .article-wrapper .education dt {
+  float: left;
+  font-weight: bold;
+}
+
+.about-me .article-wrapper .education dt::after {
+  content: ":";
+  margin-right: .5rem;
+  font-weight: bold;
+}
+
+.about-me .article-wrapper .skills ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about-me .article-wrapper .skills ul li {
+  padding: .5rem;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  box-shadow: 0 0 .5rem black;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me .article-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .about-me .article-wrapper article {
+    width: 100%;
   }
 }
