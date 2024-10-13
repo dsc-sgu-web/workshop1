@@ -137,6 +137,25 @@
           </article>
         </div>
       </section>
+
+      <div id="contacts" class="anchor"></div>
+      <section class="contacts">
+        <h1>Связаться со мной</h1>
+        
+        <div class="form-wrapper">
+          <form action="/submit-form" method="POST" id="contact-form">
+            <input type="text" name="name" placeholder="Имя" maxlength="100" minlength="1" required />
+            <input type="email" name="email" placeholder="E-mail" maxlength="200" minlength="3" required />
+            <textarea name="message" placeholder="Сообщение" maxlength="1000" minlength="10" required></textarea>
+
+            <div class="btn-group">
+              <button class="btn bi bi-send" type="submit">Отправить</button>
+              <a class="btn bi bi-telegram"></a>
+              <a class="btn bi bi-linkedin"></a>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <script src="app.js"></script>
