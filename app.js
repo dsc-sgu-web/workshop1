@@ -27,3 +27,21 @@ navbarNavlinks.forEach((item) => {
     }
   });
 });
+
+// Form handling
+const handleFormSubmit = (event) => {
+  event.preventDefault();
+  const { elements } = form
+  const data = Array.from(elements)
+    .filter((item) => !!item.name)
+    .map((element) => {
+      const { name, value } = element
+
+      return { name, value }
+    })
+
+  console.log(data)
+};
+
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', handleFormSubmit);
