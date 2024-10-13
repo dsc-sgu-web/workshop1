@@ -3,9 +3,26 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: Rubik;
+  src: url(fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+  font-family: Rubik;
+  font-weight: bold;
+  src: url(fonts/Rubik-Bold.ttf);
+}
+
 body {
   font-size: 16px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Rubik, sans-serif;
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 2rem auto;
 }
 
 :root {
@@ -13,6 +30,22 @@ body {
   --color-bg: #efefef;
   --color-navlink: #ccc;
   --color-navlink-hover: #efefef;
+}
+
+.btn {
+  transition: all 125ms;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  width: max-content;
+  padding: 0.5rem;
+  border: 0.25rem solid var(--color-text);
+}
+
+.btn:active {
+  scale: 90%;
 }
 
 /* navbar */
@@ -37,6 +70,7 @@ nav > .brand {
   gap: 1em;
   font-size: x-large;
   font-weight: bold;
+  color: var(--color-bg);
 }
 
 nav > .brand > img {
@@ -98,5 +132,39 @@ nav .items.socials a {
   nav .items-wrapper.hidden {
     translate: -100vw;
     opacity: 0;
+  }
+}
+
+/* hero */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.hero > img {
+  height: 20rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  box-shadow: 0.5rem 0.5rem 2rem var(--color-text);
+}
+
+.hero .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: larger;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero .info {
+    max-width: 80%;
+    font-size: medium;
   }
 }
